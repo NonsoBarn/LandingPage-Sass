@@ -1,0 +1,44 @@
+// colors
+
+$color-primary: #ff6f00;
+$color-secondary: #1d1b35;
+$bg-color: #ffffff;
+
+// @font-face {
+//   font-family: "Poppins";
+//   src: url(./Font/Poppins-Medium.ttf);
+// }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Raleway:ital@1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  body {
+    height: 100vh;
+    background-color: $bg-color;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    padding: 2rem;
+    position: relative;
+
+    .design {
+      width: 700px;
+      height: 350px;
+      border-top-left-radius: 170px;
+      border-bottom-left-radius: 170px;
+      background: red;
+      transform: rotate(-50deg);
+      // border-radius: 50%;
+      position: absolute;
+      right: -150px;
+      opacity: 20%;
+
+      top: 20px;
+      z-index: -5;
+    }
+  }
+}
