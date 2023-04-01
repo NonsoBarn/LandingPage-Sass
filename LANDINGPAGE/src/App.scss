@@ -1,44 +1,66 @@
-// colors
+// Utilities
+@import "utilities/variables";
 
-$color-primary: #ff6f00;
-$color-secondary: #1d1b35;
-$bg-color: #ffffff;
-
-// @font-face {
-//   font-family: "Poppins";
-//   src: url(./Font/Poppins-Medium.ttf);
-// }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Raleway:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 
   body {
-    height: 100vh;
-    background-color: $bg-color;
+    background-color: $white;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    padding: 2rem;
-    position: relative;
 
-    .design {
-      width: 700px;
-      height: 350px;
-      border-top-left-radius: 170px;
-      border-bottom-left-radius: 170px;
-      background: red;
-      transform: rotate(-50deg);
-      // border-radius: 50%;
-      position: absolute;
-      right: -150px;
-      opacity: 20%;
+    .app {
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
 
-      top: 20px;
-      z-index: -5;
+      .design {
+        width: 700px;
+        height: 350px;
+        border-top-left-radius: 170px;
+        border-bottom-left-radius: 170px;
+        background: $color-primary;
+        transform: rotate(-50deg);
+        // border-radius: 50%;
+        position: absolute;
+
+        opacity: 20%;
+        right: -150px;
+        top: 20px;
+        z-index: -5;
+      }
+
+      .design2 {
+        width: 600px;
+        height: 350px;
+        border-top-left-radius: 170px;
+        border-bottom-left-radius: 170px;
+        background: $color-primary;
+        transform: rotate(140deg);
+        // border-radius: 50%;
+        position: absolute;
+        opacity: 20%;
+        right: 1000px;
+        top: 1050px;
+        z-index: -5;
+
+        @media (max-width: 992px) {
+          transform: rotate(-50deg);
+          width: 650px;
+          height: 350px;
+          right: -400px;
+          top: 670px;
+        }
+      }
     }
+
+    // @media (max-width: 992px) {
+    //   padding: 0;
+    // }
   }
 }

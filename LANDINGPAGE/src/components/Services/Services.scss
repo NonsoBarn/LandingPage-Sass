@@ -1,0 +1,111 @@
+// Utilities
+@import "../../utilities/variables";
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  color: $color-secondary;
+
+  .services-text {
+    margin-bottom: 5rem;
+    text-align: start;
+    h1 {
+      padding: 0 7rem;
+    }
+
+    p {
+      padding: 0 7rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+  .services-list {
+    padding: 0 6rem;
+    padding-top: 7rem;
+    .list {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1.5rem;
+      //   row-gap: 3rem;
+
+      .number {
+        margin-right: 3rem;
+        margin-top: 1rem;
+        color: $white;
+        background-color: $color-primary;
+        padding: 0 1rem;
+        border-radius: 2rem;
+        height: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+
+        .numbermobile {
+          display: none;
+        }
+      }
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    .services-text {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+      text-align: center;
+      h1 {
+        padding: 0 2rem;
+      }
+      p {
+        padding: 0 2rem;
+      }
+    }
+
+    .services-list {
+      padding: 0 2rem;
+
+      .list {
+        .number {
+          display: none;
+        }
+
+        h2 {
+          display: flex;
+          background-color: $color-primary-light;
+          padding: 0.1rem 0;
+          border-top-left-radius: 3rem;
+          border-bottom-left-radius: 3rem;
+          margin-bottom: 1rem;
+
+          .numbermobile {
+            display: flex;
+            margin-right: 1rem;
+
+            color: $white;
+            background-color: $color-primary;
+            padding: 0 1rem;
+            padding-top: 0.1rem;
+            border-radius: 2rem;
+            height: 1.8rem;
+          }
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

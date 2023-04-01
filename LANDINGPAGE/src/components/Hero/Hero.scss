@@ -1,3 +1,6 @@
+// Utilities
+@import "../../utilities/variables";
+
 .hero {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -6,6 +9,7 @@
   text-align: start;
   align-items: center;
   padding: 0 0.3rem;
+  margin-bottom: 6rem;
 
   .hero-img .img {
     width: 30rem;
@@ -20,9 +24,11 @@
       font-size: 3rem;
       font-weight: 600;
       line-height: 4rem;
+      color: $color-secondary;
     }
 
     p {
+      color: $color-secondary;
       margin-top: 0.5rem;
       font-size: 200;
       font-weight: 400;
@@ -31,9 +37,9 @@
 
     button {
       margin-top: 1.5rem;
-      background-color: #ff6f00;
-      color: #fff;
-      padding: 1rem 2rem;
+      background-color: $color-primary;
+      color: $white;
+      padding: 0.5rem 1rem;
       border: none;
       border-radius: 50px;
       font-size: 0.8rem;
@@ -43,6 +49,15 @@
       box-shadow: 0 20px 25px -5px rgb(0 0 0 /0.1),
         0 8px 10px -6px rgb(0 0 0 / 0.1);
       transition: scale 0.2 ease;
+
+      &:hover {
+        scale: 1.05;
+        color: #fff;
+      }
+
+      &:active {
+        scale: 0.95;
+      }
     }
   }
 
