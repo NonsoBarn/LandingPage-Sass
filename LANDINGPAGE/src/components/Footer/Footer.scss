@@ -1,0 +1,125 @@
+// Utilities
+@import "../../utilities/variables";
+
+.footer {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
+  height: 16rem;
+  padding: 3rem;
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .logo {
+      cursor: pointer;
+    }
+
+    .social-icon {
+      display: flex;
+      flex-direction: row;
+      gap: 0.7rem;
+      cursor: pointer;
+    }
+    .copyright-mobile {
+      display: none;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+
+    li {
+      list-style: none;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+
+    form {
+      .text {
+        padding: 0.4rem;
+        border-radius: 2rem;
+        border-color: transparent;
+        margin-right: 0.5rem;
+      }
+
+      .btn {
+        padding: 0.4rem 0.5rem;
+        border-radius: 2rem;
+        border-color: transparent;
+        color: $white;
+        background-color: $color-primary;
+        cursor: pointer;
+      }
+    }
+
+    .copyright {
+      font-size: 0.6rem;
+      margin-left: 3.4rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    height: 28rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    .icons {
+      order: 3;
+      gap: 0;
+
+      .logo {
+        order: 999;
+        padding-left: 6rem;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+      }
+
+      .social-icon {
+        gap: 3rem;
+        font-size: 2rem;
+      }
+      .copyright-mobile {
+        display: block;
+        order: 9999;
+        font-size: 0.6rem;
+        margin-left: 5.5rem;
+      }
+    }
+
+    .links {
+      order: 2;
+      gap: 7rem;
+    }
+    .search {
+      order: 1;
+
+      form {
+        .text {
+          padding: 0.3rem 3rem;
+        }
+
+        .btn {
+          padding: 0.3rem 0.9rem;
+        }
+      }
+      .copyright {
+        display: none;
+      }
+    }
+  }
+}

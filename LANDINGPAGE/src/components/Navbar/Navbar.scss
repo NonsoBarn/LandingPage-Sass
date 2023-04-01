@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem;
 
   .links {
     display: flex;
@@ -37,8 +38,8 @@
   }
 
   .action-btn {
-    background-color: #ff6f00;
-    color: #fff;
+    background-color: $color-primary;
+    color: $white;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 20px;
@@ -52,7 +53,7 @@
 
     &:hover {
       scale: 1.05;
-      color: #fff;
+      color: $white;
     }
 
     &:active {
@@ -79,7 +80,7 @@
   width: 0;
   height: 0;
 
-  background: #fff;
+  background: $white;
   backdrop-filter: blur(15px);
   border-radius: 8px;
   overflow: hidden;
